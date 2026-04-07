@@ -1,0 +1,47 @@
+This is my Git note
+
+Git commands guide in a sequential, practical style—no tables—so I can follow it like a step-by-step manual.
+
+1️⃣ Basic Operations
+git init → Initialize a new local Git repository.
+git status → Check the status of your repository (which files are modified, added, or untracked).
+git add <file> → Stage a file for commit, e.g., git add notes.txt.
+git commit -m "message" → Commit staged changes to the local repository, e.g., git commit -m "Add notes.txt".
+git log → View the commit history.
+git diff → See changes made to files that are not yet staged.
+
+2️⃣ Branch Management
+git branch → List all local branches.
+git branch <name> → Create a new branch, e.g., git branch feature1.
+git switch <branch> → Switch to an existing branch, e.g., git switch main.
+git switch -c <branch> → Create a new branch and switch to it, e.g., git switch -c feature/add-notes.
+git merge <branch> → Merge another branch into the current branch, e.g., git merge feature/add-notes.
+git branch -d <branch> → Delete a local branch, e.g., git branch -d feature/add-notes.
+
+3️⃣ Remote Repository Operations
+git remote -v → View the remote repository URLs.
+git remote add origin <url> → Add a remote repository, e.g., git remote add origin https://github.com/username/repo.git.
+git push -u origin <branch> → Push a branch to remote and set upstream tracking, e.g., git push -u origin main.
+git push → Push changes to the remote branch (once upstream is set).
+git fetch → Fetch updates from remote without merging, e.g., git fetch origin.
+git pull → Fetch and merge remote changes into your current branch, e.g., git pull origin main.
+git push origin --delete <branch> → Delete a remote branch, e.g., git push origin --delete feature1.
+
+4️⃣ Viewing Status and History
+git log --oneline --graph --all → View a compact, graphical history of commits.
+git show <commit> → View details of a specific commit.
+git diff → View unstaged changes.
+git diff --staged → View staged changes ready for commit.
+
+5️⃣ Undo and Rollback
+git restore <file> → Undo changes in the working directory, e.g., git restore notes.txt.
+git restore --staged <file> → Unstage a staged file.
+git reset --soft HEAD^ → Undo the last commit but keep changes staged.
+git reset --hard HEAD^ → Undo the last commit and discard changes completely.
+git revert <commit> → Create a new commit that undoes a specific commit.
+
+6️⃣ Handy Tips
+git branch → Quickly see which branch you are on.
+git fetch origin && git switch main && git merge origin/main → Sync your local main branch with remote.
+git log -p <file> → See the change history for a specific file.
+git clean -f → Remove untracked files from your working directory.
